@@ -9,7 +9,30 @@ import SwiftUI
 
 struct GameBoardView: View {
     var body: some View {
-        Text("This is the game board.")
+        VStack {
+            
+            // Top row
+            HStack {
+                TileView(state: nought)
+                TileView(state: cross)
+                TileView(state: nought)
+            }
+            
+            // Middle row
+            HStack {
+                TileView(state: empty)
+                TileView(state: nought)
+                TileView(state: cross)
+            }
+            
+            // Bottom row
+            HStack {
+                TileView(state: empty)
+                TileView(state: empty)
+                TileView(state: nought)
+            }
+            
+        }
     }
 }
 
